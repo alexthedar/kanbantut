@@ -3,13 +3,12 @@ import alt from '../libs/alt';
 import NoteActions from '../actions/NoteActions';
 
 class NoteStore {
-  constructor(){
+  constructor() {
     this.bindActions(NoteActions);
 
     this.notes = [];
   }
-
-  create(note){
+  create(note) {
     const notes = this.notes;
 
     note.id = uuid.v4();
@@ -18,16 +17,18 @@ class NoteStore {
       notes: notes.concat(note)
     });
   }
-  update(updateNote){
+  update(updatedNote) {
     const notes = this.notes.map(note => {
-      if(note.id === updateNote.id){
-        return Object.assign({}, note, updateNote);
+      if(note.id === updatedNote.id) {
+        return Object.assign({}, note, updatedNote);
       }
+
       return note;
     });
+
     this.setState({notes});
   }
-  delete(id){
+  delete(id) {
     this.setState({
       notes: this.notes.filter(note => note.id !== id)
     });
