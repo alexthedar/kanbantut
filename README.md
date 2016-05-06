@@ -36,3 +36,5 @@ Drag and Drop Lanes.  It would be nice to have the ability to reorder lanes via 
 Deleting a Lane does not delete its notes.  Currently when you delete a lane with notes the notes are no longer accessible to the user but the notes still exist to the app.  
 
 Drag and Drop for touch screens.  Drag and drop does not work on touch screens and so something needs to be implemented to accommodate mobile devices.  
+
+commits were not done well because i was following a tutorial and not building from scratch.
